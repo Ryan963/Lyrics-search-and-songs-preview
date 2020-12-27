@@ -16,6 +16,7 @@ function displayData(data){
     data.data.forEach(song => {
         output += `
         <li>
+            <img src="${song.album.cover_medium}">
             <span><strong>${song.artist.name}</strong> - ${song.title}</span>
             <button class="btn" data-artist="${song.artist.name}"
             data-songtitle="${song.title}" data-audio="${song.preview}" data-image="${song.album.cover_medium}">Get Lyrics</button>
