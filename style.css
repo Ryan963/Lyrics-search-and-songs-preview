@@ -109,12 +109,14 @@ ul.songs li {
 
 .container {
     margin: 30px auto;
-    /*max-width: 100%;
-    width: 500px; */
+}
+.container span {
+    font-size: 20px;
 }
 
 .container h2 {
     font-weight: 300;
+    margin: 10 20px;
 }
 
 .container p {
@@ -155,3 +157,115 @@ ul.songs li {
 }
 
 
+
+.music-container {
+    background: rgb(8, 2, 31);
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(252,169,169,0.6);
+    display: flex;
+    padding: 20px 30px;
+    color: white;
+    position: relative;
+    margin: 150px 30px;
+    z-index: 10;
+    width: 500px;
+    
+}
+
+.img-container {
+    width: 110px;
+    position: relative;
+}
+
+.img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 110px;
+    width: inherit;
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-container.play  .img-container img{
+    animation-play-state: running;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.action-btn {
+    background-color: rgb(8, 2, 31);
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+
+.action-btn.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+.action-btn:focus {
+    outline: 0;
+}
+.music-info {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: 15px 15px 0 0;
+    top: 0;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    left: 20px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+}
+
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.music-info h4 {
+    margin: 0;
+}
+
+
+.progress-container {
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+.progress {
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+
+}
