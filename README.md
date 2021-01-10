@@ -10,6 +10,6 @@ under the music player there will be the lyrics of the song
 # Note
 the ovh api is having some problems when fetching the lyrics or the music of the song so it might show that 
 lyrics is not available for the song and that is because it could not get the lyrics 
-same for the audio of the song
-I will be replacing this api as soon as I find another one that will give me better results
+same for the audio of the song. 
+I will be replacing this api as soon as I find another one that will give me better results. 
 Thank you and sorry for the inconvenience.
