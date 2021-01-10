@@ -12,5 +12,5 @@ The ovh api is having some problems when fetching the lyrics or the music of the
 lyrics is not available for the song and the same for the audio of the song. 
 I researched this issue and it turned out to be an ssl state error so the page that contains the 
 lyrics or audio is insecure so the browser is blocking it sometimes because of a mismach between
-the certificate name and the browser name.However the app will work fine if I run it from an html5 file. 
+the certificate name and the link name.However the app will work fine if I run it from an html5 file. 
 Sorry for the incovinience.
